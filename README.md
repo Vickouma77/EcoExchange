@@ -1,5 +1,5 @@
 # EcoExchange
-<img src=https://images2.imgbox.com/61/9a/flMz8gd6_o.png width="100" height="60">
+<img src=https://images2.imgbox.com/61/9a/flMz8gd6_o.png width="200" height="200">
 
 ### Project Description
 EcoExchange is a revolutionary recycling-based commerce platform that aims to promote sustainability and reduce waste by enabling individuals and businesses to buy and sell recycled products. The platform will offer a one-stop-shop for all recycled products, ranging from clothing and furniture to electronics and building materials.
