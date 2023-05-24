@@ -1,4 +1,5 @@
-# app.py
+#!/usr/bin/env python3
+
 from flask import Flask
 from auth.render import auth_blueprint
 

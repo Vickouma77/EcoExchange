@@ -1,4 +1,9 @@
 # auth/render.py
+"""
+A simple flask blueprint to handle 
+the login form, signup form, forgotpassword form
+"""
+
 from flask import Blueprint, render_template, request, redirect, url_for
 
 auth_blueprint = Blueprint('auth', __name__)
