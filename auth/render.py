@@ -5,6 +5,9 @@ the login form, signup form, forgotpassword form
 """
 
 from flask import Blueprint, render_template, request, redirect, url_for
+from flask_mysqldb import MySQL
+import MySQLdb.cursors
+import re
 
 auth_blueprint = Blueprint('auth', __name__)
 

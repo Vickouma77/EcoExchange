@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
-    <link rel="stylesheet" href="statics/css/login.css">
+    <link rel="stylesheet" href="/statics/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <title>EcoExchange login</title>
 </head>
 <body>
+
+    <div class="login">
+        <h1>Login</h1>
+        <div class="links">
+            <a href="{{ url_for('login') }}" class="active">Login</a>
+            <a href="#">Register</a>
+        </div>
+
+        <!--Login form starts here-->
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
     
 </body>
 </html>
