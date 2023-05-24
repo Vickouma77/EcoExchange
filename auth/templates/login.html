@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
     <title>EcoExchange login</title>
 </head>
 <body>
-
-    <div class="login">
-        <h1>Login</h1>
-        <div class="links">
-            <a href="{{ url_for('login') }}" class="active">Login</a>
-            <a href="#">Register</a>
+    <section>
+        <div class="colour"></div>
+        <div class="colour"></div>
+        <div class="colour"></div>
+        <div class="box">
+            <!--div elements-->
+            <div class="square" style="--i: 0"></div>
+            <div class="square" style="--i: 1"></div>
+            <div class="square" style="--i: 2"></div>
+            <div class="square" style="--i: 3"></div>
+            <div class="square" style="--i: 4"></div>
+            <div class="container">
+                <div class="form">
+                    <h2>Login Form</h2>
+                    <form>
+                        <!--Html form elements-->
+                        <div class="input__box">
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input__box">
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <div class="input__box">
+                            <input type="submit" value="Login" />
+                        </div>
+                        <p class="forget">
+                            Forgot Password? <a href="#">Click Here</a>
+                        </p>
+                        <p class="forget">
+                            Don't have an account? <a href="#">Sign Up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <!--Login form starts here-->
-        <form action="{{ url_for('login') }}" method="post">
-            <label for="username">
-                <i class="fas fa-user"></i>
-            </label>
-            <input type="text" name="username" placeholder="Username" id="username" required>
-            <label for="password">
-                <i class="fas fa-lock"></i>
-            </label>
-            <input type="password" name="password" placeholder="Password" id="password" required>
-            <div class="msg">{{ msg }}</div>
-            <input type="submit" value="Login">
-        </form>
-    </div>
-    
+    </section>
 </body>
 </html>

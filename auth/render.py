@@ -9,7 +9,7 @@ auth_blueprint = Blueprint('auth', __name__)
 auth_blueprint.config = {
     'MYSQL_HOST': 'localhost',
     'MYSQL_USER': 'root',
-    'MYSQL_PASSWORD': '',
+    'MYSQL_PASSWORD': 'Vickouma@77',
     'MYSQL_DB': 'EcoExchange'
 }
 
