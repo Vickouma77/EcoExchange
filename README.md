@@ -8,5 +8,3 @@ The main goal of EcoExchange is to create a circular economy where waste is mini
 
 ### Context
 The objective of this proposed project is to create a highly functional and user-friendly web-based platform that focuses on recycling commerce. The primary goal of the platform is to facilitate the buying and selling of recyclable materials, in a streamlined and efficient manner. The proposed platform will offer a simple and intuitive interface that will enable users to easily navigate the various features and functionalities available on the platform.By leveraging the latest technologies and tools, the platform will enable seamless connectivity between buyers and sellers of recyclable materials, regardless of their location or time zone. Additionally, the platform will be designed to cater to the unique needs of both buyers and sellers, offering a range of innovative features and functionalities that will enhance the user experience and make it easier for them to conduct their transactions.
-
-### Technologies
