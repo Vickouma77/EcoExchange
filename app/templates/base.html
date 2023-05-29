@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>EcoExchange</title>
-  <!--CSS and JavaScript dependencies here -->
+  <!-- CSS and JavaScript dependencies here -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -27,11 +27,10 @@
       {% endif %}
     {% endwith %}
 
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
   </div>
 
-  <!--JavaScript dependencies here -->
+  <!-- JavaScript dependencies here -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
