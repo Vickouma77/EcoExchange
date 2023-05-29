@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EcoExchange</title>
-  <!-- CSS and JavaScript dependencies here -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>EcoExchange</title>
+    <!-- Add your CSS and JS links here -->
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="{{ url_for('index') }}">Home</a></li>
-      <li><a href="{{ url_for('products') }}">Products</a></li>
-      <li><a href="{{ url_for('register') }}">Register</a></li>
-      <li><a href="{{ url_for('login') }}">Login</a></li>
-      <li><a href="{{ url_for('logout') }}">Logout</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul class="flash-messages">
-          {% for message in messages %}
-            <li>{{ message }}</li>
-          {% endfor %}
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
         </ul>
-      {% endif %}
+    </nav>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     {% endwith %}
-
-    {% block content %}{% endblock %}
-  </div>
-
-  <!-- JavaScript dependencies here -->
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
