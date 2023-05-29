@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required
 from .forms import RegistrationForm, LoginForm
 from .models import User
-from . import app, db
+from . import db
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
