@@ -5,9 +5,9 @@ from app.models import User
 from flask_login import current_user, login_user, logout_user, login_required
 
 
-@app.route('/')
+@app.route('/base')
 def home():
-    return render_template('home.html')
+    return render_template('base.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])

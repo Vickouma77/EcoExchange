@@ -1,48 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Register</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <h1>Register</h1>
-    <form id="single-form" method="POST" action="{{ url_for('register') }}">
-        {{ form.csrf_token }}
-        <div class="form-group">
-            <!--<label for="username">Username:</label>-->
-            <input type="text" id="username" name="username" value="{{ form.username.data }}" placeholder="Username" required>
-            {% if form.username.errors %}
-                <span class="error">{{ form.username.errors[0] }}</span>
-            {% endif %}
-        </div>
-
-        <div class="form-group">
-            <!--<label for="email">Email:</label>-->
-            <input type="email" id="email" name="email" value="{{ form.email.data }}" placeholder="Email" required>
-            {% if form.email.errors %}
-                <span class="error">{{ form.email.errors[0] }}</span>
-            {% endif %}
-        </div>
-
-        <div class="form-group">
-            <!--<label for="password">Password:</label>-->
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            {% if form.password.errors %}
-                <span class="error">{{ form.password.errors[0] }}</span>
-            {% endif %}
-        </div>
-
-        <div class="form-group">
-            <!--<label for="confirm_password">Confirm Password:</label>-->
-            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
-            {% if form.confirm_password.errors %}
-                <span class="error">{{ form.confirm_password.errors[0] }}</span>
-            {% endif %}
-        </div>
-
-        <button type="submit">Register</button>
-    </form>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="register">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}">Login</a>
+				<a href="{{ url_for('register') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('register') }}" method="post" autocomplete="off">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="Email" id="email" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
 </html>
