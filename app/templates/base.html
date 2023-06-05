@@ -3,12 +3,19 @@
 <head>
     <title>EcoExchange</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='nativeIdea3(1).png') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--body starts here-->
     <header>
-        <h1>EcoExchange</h1>
+        <!--<img src="{{ url_for('static', filename='nativeIdea3(1).png') }}" alt="logo" class="logo"> -->
+        <h1>
+            EcoExchange
+        </h1>
         <nav class="layout_page">
             <ul class="liststyle">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -23,9 +30,73 @@
     </header>
     <!--starting the landing page body-->
     <section class="landing_layout">
-        <h1>Welcome To EcoExchange</h1>
-        <p>Transforming the world through recycling and sustainability</p>
+        <h1>EcoExchange</h1>
+        <h2>Transforming the world through recycling and sustainability</h2>
+
+        <div class="container">
+            <div class="card">
+              <h1 class="title">About</h1>
+              <p class="subtitle">
+                EcoExchange is a recycling-based platform for buying and selling recycled products. Our goal is to promote sustainability and create a circular economy. We connect buyers and sellers in a user-friendly marketplace. Join us to access affordable, high-quality recycled products that are good for the environment and your wallet.
+              </p>
+              <button class="btn"><a href="{{ url_for('register') }}">Get Started</a></button>
+            </div>
+            <div class="blob"></div>
+        </div>
+
     </section>
+
+    <section class="landing_layout1">
+        <h1>How it Works</h1>
+        <div class="container1">
+            <div class="card1">
+              <h1 class="title1">Buyers</h1>
+              <p class="subtitle1">
+                Buyers can browse through our marketplace to find recycled products that they are interested in. They can then add these products to their cart and checkout. Buyers can also view their order history and leave reviews for sellers.
+              </p>
+            </div>
+            <div class="card1">
+              <h1 class="title1">Sellers</h1>
+              <p class="subtitle1">
+                Sellers can post their recycled products on our marketplace. They can also view their order history and reviews from buyers. Sellers can also edit and delete their products.
+              </p>
+            </div>
+            <div class="blob"></div>
+        </div>
+    </section>
+
+    <section class="landing_layout2">
+        <h1>Our Team</h1>
+        <div class="container1">
+            <div class="card1">
+              <h1 class="title1">Vick</h1>
+              <p class="subtitle1">
+                Vick is a student at ALX-Africa. He is interested in software engineering and cyber security. In his free time, he enjoys playing table-tennis and watching movies.
+              </p>
+            </div>
+            <div class="card1">
+              <h1 class="title1">Jane</h1>
+              <p class="subtitle1">
+                jane is a senior at the University of Africa studying Computer Science. She is interested in software engineering and data science. In her free time, she enjoys playing swimming and dancing.
+              </p>
+            </div>
+            <div class="card1">
+              <h1 class="title1">Doe</h1>
+              <p class="subtitle1">
+                Doe is a senior at the University of Michigan studying Computer Science. She is interested in software engineering. In her free time, she enjoys playing tennis and watching movies.
+              </p>
+            </div>
+            <div class="blob"></div>
+
+        </div>
+    </section>
+
+    <!--footer section-->
+    <footer class="site-footer">
+
+    </footer>
+    
+    
 
     {% with messages = get_flashed_messages() %}
         {% if messages %}
