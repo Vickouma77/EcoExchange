@@ -2,20 +2,31 @@
 <html>
 <head>
     <title>EcoExchange</title>
-    <!-- Add your CSS and JS links here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            {% if current_user.is_authenticated %}
+    <!--body starts here-->
+    <header>
+        <h1>EcoExchange</h1>
+        <nav class="layout_page">
+            <ul class="liststyle">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                {% if current_user.is_authenticated %}
                 <li><a href="{{ url_for('logout') }}">Logout</a></li>
-            {% else %}
+                {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>
                 <li><a href="{{ url_for('login') }}">Login</a></li>
-            {% endif %}
-        </ul>
-    </nav>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <!--starting the landing page body-->
+    <section class="landing_layout">
+        <h1>Welcome To EcoExchange</h1>
+        <p>Transforming the world through recycling and sustainability</p>
+    </section>
+
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul class="messages">
@@ -25,6 +36,7 @@
             </ul>
         {% endif %}
     {% endwith %}
+
     {% block content %}
     {% endblock %}
 </body>
