@@ -1,4 +1,4 @@
-from flask import render_template, redirect, flash, url_for
+from flask import render_template, redirect, flash, url_for, session
 from app import app, db
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
@@ -6,8 +6,17 @@ from flask_login import current_user, login_user, logout_user, login_required
 
 
 @app.route('/base')
-def home():
+def base():
     return render_template('base.html')
+
+@app.route('/home')
+def home():
+    # Check if user is loggedin
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('home.html', username=session['username'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 
 @app.route('/register', methods=['GET', 'POST'])
