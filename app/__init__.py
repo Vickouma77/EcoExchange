@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'c54fd70c15fdcf389873a5930c6dc4a1'
 
-app.config['SECRET_KEY'] = 'c54fd70c15fdcf389873a5930c6dc4a1' 
 
 DATABASE_HOST = 'localhost'
 DATABASE_PORT = 3306

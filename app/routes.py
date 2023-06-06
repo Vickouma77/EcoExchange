@@ -9,6 +9,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 def base():
     return render_template('base.html')
 
+
 @app.route('/home')
 def home():
     # Check if user is loggedin
@@ -48,7 +49,7 @@ def login():
             flash('Logged in successfully!', 'success')
             return redirect(url_for('home'))
         else:
-            flash('Login unsuccessful. Please check your credentials.', 'danger')
+            flash('Login unsuccessful.check your credentials.', 'danger')
 
     return render_template('login.html', form=form)
 
