@@ -8,3 +8,5 @@ mysqlclient==2.1.1
 requests==2.25.1
 SQLAlchemy==2.0.6
 pymysql
+Flask-Migrate
+Flask-Script
