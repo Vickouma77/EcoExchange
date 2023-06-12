@@ -1,3 +1,4 @@
+"""
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -13,3 +14,4 @@ manager.add_command('db', Migrate)
 
 if __name__ == '__main__':
     manager.run()
+"""
