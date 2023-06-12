@@ -5,6 +5,7 @@
 		<title>{% block title %}{% endblock %}</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="icon" href="{{ url_for('static', filename='nativeIdea3(1).png') }}">
 	</head>
 	<body class="loggedin">
 		<nav class="navtop">
@@ -18,5 +19,8 @@
 		<div class="content">
 			{% block content %}{% endblock %}
 		</div>
-	</body>
+        <div class="products">
+            {% block products %}{% endblock %}
+        </div>	
+    </body>
 </html>

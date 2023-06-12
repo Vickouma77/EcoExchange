@@ -1,12 +1,5 @@
 Flask
-Flask-Cors==3.0.10
-Flask-Login==0.6.2
-Flask-MySQLdb==1.0.1
-Flask-WTF==0.15.1
-WTForms==2.3.3
-mysqlclient==2.1.1
-requests==2.25.1
-SQLAlchemy==2.0.6
-pymysql
-Flask-Migrate
-Flask-Script
+Flask-MySQLdb
+mysqlclient
+PyMySQL
+Flask-Cors
