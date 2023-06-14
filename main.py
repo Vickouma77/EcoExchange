@@ -135,7 +135,7 @@ def product():
         price = request.form['price']
         image = request.files['image']
 
-        # Save the image to a desired location (e.g., a folder in your project directory)
+        # Saving the image to a desired location
         image.save('<desired_location>/<filename>')
 
         # Insert the product details into the database
