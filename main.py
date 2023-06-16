@@ -136,7 +136,7 @@ def product():
         image = request.files['image']
 
         # Saving the image to a desired location
-        image.save('<desired_location>/<filename>')
+        image.save('desired_location/<filename>')
 
         # Insert the product details into the database
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
