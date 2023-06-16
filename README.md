@@ -27,3 +27,22 @@ EcoExchange encourages buyers to provide feedback and reviews about their experi
 
 ### 8. Commission-Based Model
 EcoExchange operates on a commission-based model to sustain its platform and services. Sellers are charged a small fee for listing their products on the platform, which helps cover operational costs, platform maintenance, and ongoing improvements. Buyers, however, can access a wide range of high-quality recycled products at affordable prices.
+
+## The Project structure
+```
+.
+├── main.py
+├── README.md
+├── requirements.txt
+├── static
+│   ├── nativeIdea3(1).png
+│   └── style.css
+├── templates
+│   ├── home.html
+│   ├── index.html
+│   ├── layout.html
+│   ├── product.html
+│   ├── profile.html
+│   └── register.html
+└── venv
+```
